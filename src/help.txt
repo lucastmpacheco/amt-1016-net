@@ -1,0 +1,25 @@
+amtctl — suite da central Intelbras AMT 1016 NET (ISECNet V1)
+
+USO:
+  amtctl [--host IP] [--port N] --senha DIGITOS <comando> [opcoes]
+  (senha tambem via env AMT_SENHA ; host via AMT_HOST ; padrao <IP-DA-CENTRAL>:9009)
+
+COMANDOS:
+  status --replay-log <log>   le o status AO VIVO via protocolo e7 (replay da sessao
+                              capturada; nao precisa de senha em texto). FUNCIONA.
+  status                      (via V1 0xE9 — requer senha de instalador)
+  status-completo             status completo
+  armar    [--particao A|B|C|D] [--stay]
+  desarmar [--particao A|B|C|D]
+  sirene-off
+  pgm <n> on|off              liga/desliga a saida PGM n
+  panico [--tipo N] --yes     EFEITO FISICO (sirene/monitoramento): exige --yes
+  raw <hex...>                envia bytes crus e mostra a resposta (debug)
+
+EXEMPLOS:
+  amtctl --senha 123456 status
+  amtctl --senha 123456 armar --particao A
+  amtctl --senha 123456 desarmar
+  AMT_SENHA=123456 amtctl raw 01 c4 3a
+
+NOTA: a senha nunca e impressa nem gravada em log.
