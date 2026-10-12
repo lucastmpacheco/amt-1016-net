@@ -3,6 +3,7 @@ name = "amtctl"
 version = "0.1.0"
 edition = "2021"
 description = "Cliente/suite da central Intelbras AMT 1016 NET (ISECNet V1), nativo, sem dependencias."
+license = "MIT"
 
 [[bin]]
 name = "amtctl"

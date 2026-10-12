@@ -50,4 +50,4 @@ O aplicativo Android é Xamarin/.NET; a lógica fica em assemblies dentro de `as
 sem necessidade de Java.
 
 ## Licença
-A definir.
+MIT — ver [`LICENSE`](LICENSE).
